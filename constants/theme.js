@@ -1,7 +1,7 @@
 const COLORS = {
-    primary: "#312651",
-    secondary: "#444262",
-    tertiary: "#FF7754",
+    primary: "#161616",
+    secondary: "#fcfcfc",
+    tertiary: "#f6ab53",
   
     gray: "#83829A",
     gray2: "#C1C0C8",
@@ -27,7 +27,7 @@ const COLORS = {
   
   const SHADOWS = {
     small: {
-      shadowColor: "#000",
+      shadowColor: "#161616",
       shadowOffset: {
         width: 0,
         height: 2,
@@ -37,7 +37,7 @@ const COLORS = {
       elevation: 2,
     },
     medium: {
-      shadowColor: "#000",
+      shadowColor: "#161616",
       shadowOffset: {
         width: 0,
         height: 2,
@@ -48,4 +48,4 @@ const COLORS = {
     },
   };
   
-  export { COLORS, FONT, SIZES, SHADOWS };
+   export { COLORS, FONT, SIZES, SHADOWS };

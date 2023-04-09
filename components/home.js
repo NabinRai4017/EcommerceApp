@@ -5,7 +5,10 @@ class HomeScreen extends Component {
 
     render() {
         return (
-            <Text>Home</Text>
+            <Text
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >Home</Text>
         );
     }
 }

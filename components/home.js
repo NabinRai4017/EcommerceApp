@@ -1,25 +1,32 @@
 import { Component } from "react";
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, ScrollView } from 'react-native';
+import { SIZES } from '../constants'
+import Trending from "./trending";
+import NewArrival from "./newarrival";
 
 class HomeScreen extends Component {
 
     render() {
         return (
-            <Text
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >Home</Text>
+            <ScrollView>
+                <Text
+                    style={styles.title}
+                >Discover</Text>
+                <Trending />
+                <NewArrival/>
+            </ScrollView>
+
         );
     }
 }
 
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+    title: {
+        left: 20,
+        top: 20,
+        fontSize: SIZES.xxLarge
+
     },
 });
 

@@ -28,7 +28,7 @@ const TabItem = (title, source, focused) => {
                         style={{
                             width: 20,
                             height: 20,
-                            tintColor: focused ? '#e32f45' : '#748c94'
+                            tintColor: focused ? COLORS.primary : '#748c94'
                         }}
                     />
 

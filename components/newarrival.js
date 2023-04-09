@@ -15,7 +15,6 @@ class NewArrival extends Component{
 
 }
 
-
 const styles = StyleSheet.create({
     title: {
         fontSize: SIZES.large,

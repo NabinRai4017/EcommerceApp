@@ -1,12 +1,9 @@
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import SearchScreen from './search';
-import CartScreen from './cart';
-import ProfileScreen from './profile';
-import HomeScreen from './home';
+import {HomeScreen, ProfileScreen, CartScreen, SearchScreen} from './screens';
 import TabItem from './tabItem'
-
 import {SHADOWS, icons} from '../constants'
+import styles from '../styles/tabs.style';
 
 const Tab = createBottomTabNavigator();
 
@@ -47,21 +44,6 @@ const Tabs = () => {
         </Tab.Navigator>
     );
 }
-
-
-const styles = StyleSheet.create({
-    tabBarStyle: {
-        position: 'absolute',
-        bottom: 50,
-        left: 10,
-        right: 10,
-        elevation: 0,
-        backgroundColor: '#ffffff',
-        borderRadius: 15,
-        height: 60,
-    },
-
-});
 
 
 export default Tabs;

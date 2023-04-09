@@ -8,4 +8,4 @@ MobX is a battle-tested library that makes state management simple and scalable 
 
 ### Hooks
 
-Hooks are functions that let you “hook into” React state and lifecycle features from function components. They let you use state and other React features without writing a class. For more detial click [here](https://react.dev/reference/react)
+Hooks are functions that let you “hook into” React state and lifecycle features from function components. They let you use state and other React features without writing a class. For more detail click [here](https://react.dev/reference/react)

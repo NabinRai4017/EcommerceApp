@@ -1,10 +1,12 @@
 import { Component } from "react";
 import { Text, StyleSheet, ScrollView } from 'react-native';
-import { SIZES } from '../constants'
-import Trending from "./trending";
-import NewArrival from "./newarrival";
+import { SIZES } from '../../constants'
 
 class HomeScreen extends Component {
+
+    constructor(){
+       
+    }
 
     render() {
         return (
@@ -12,8 +14,7 @@ class HomeScreen extends Component {
                 <Text
                     style={styles.title}
                 >Discover</Text>
-                <Trending />
-                <NewArrival/>
+              
             </ScrollView>
 
         );

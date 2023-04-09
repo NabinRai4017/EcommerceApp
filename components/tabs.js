@@ -1,13 +1,12 @@
 import { StyleSheet , View, Image, Text} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-const Tab = createBottomTabNavigator();
-
-
 import SearchScreen from './search';
 import CartScreen from './cart';
 import ProfileScreen from './profile';
 import HomeScreen from './home';
 import TabItem from './tabItem'
+
+const Tab = createBottomTabNavigator();
 
 
 const Tabs = () =>{
@@ -46,13 +45,13 @@ const Tabs = () =>{
 const styles = StyleSheet.create({
     tabBarStyle:{
         position: 'absolute',
-        bottom: 40,
+        bottom: 50,
         left:10,
         right: 10,
         elevation: 0,
         backgroundColor: '#ffffff',
         borderRadius: 15,
-        height:70,
+        height:60,
         shadowColor: '#7F5DF0',
         shadowOffset: {
             width:0,

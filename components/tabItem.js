@@ -1,14 +1,33 @@
-import React from "react";
-import { Image, Text } from "react-native";
-import { HStack, Box } from "@react-native-material/core";
+import { useEffect, useMemo, useRef } from "react";
+import { Animated, Image, Text, View } from "react-native";
+import { HStack, ZStack } from "@react-native-material/core";
 import styles from "../styles/tabitem.style";
+import { useSpring } from "../animations/useSpring";
+
 
 const TabItem = (title, source, focused) => {
+    // const to = focused ? 1 : 0
+    // const animation = useMemo(() => new Animated.Value(to), []);
+    // useEffect(() => {
+    //     Animated.spring(animation, {
+    //         toValue: to,
+    //         stiffness: 50,
+    //         useNativeDriver: true,
+    //     }).start();
+    // }, [to]);
+    // const labelTranslate = animation.interpolate({ inputRange: [0, 1], outputRange: [20, 0] });
+    // const labelVisibility = animation;
     return (
-        <Box
+
+        
+        <Animated.View
             top={14}
             h={30}
-            style={styles.box(focused)}>
+            style={[styles.box, {
+              
+            }]}>
+
+              
             <HStack
                 spacing={4}
                 style={styles.hstack} >
@@ -17,9 +36,18 @@ const TabItem = (title, source, focused) => {
                     resizeMode='contain'
                     style={styles.image(focused)}
                 />
-                {focused ? <Text style={styles.title}>{title}</Text> : null}
+
+                {focused ? <Animated.View
+                    style={[
+                        styles.centered,
+                        
+                    ]}
+                >
+                    <Text style={styles.title}>{title}</Text>
+                </Animated.View>
+                    : null}
             </HStack>
-        </Box>
+        </Animated.View>
     );
 }
 

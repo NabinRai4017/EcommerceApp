@@ -1,11 +1,13 @@
+import {Component} from 'react';
 import MainTabScreen from "./components/maintab";
 
-export default function App() {
-  return (
-    <MainTabScreen/>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <MainTabScreen/>
+    );
+  }
 }
 
-
-
-
+export default App;

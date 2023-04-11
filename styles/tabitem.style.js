@@ -2,12 +2,13 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT, SIZES } from "../constants";
 
 const styles = StyleSheet.create({
-    box: focused => ({
-        backgroundColor: focused ? COLORS.tertiary : null,
+    box: {
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 15,
-    }),
+        height: 30,
+        backgroundColor: COLORS.tertiary,
+    },
     hstack: {
         alignItems: 'center',
         justifyContent: 'center',

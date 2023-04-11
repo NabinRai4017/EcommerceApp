@@ -5,7 +5,12 @@ import TabItem from './tabItem'
 import {SHADOWS, icons} from '../constants'
 import styles from '../styles/tabs.style';
 
+
+import React from 'react';
+
+
 const Tab = createBottomTabNavigator();
+
 
 
 const Tabs = () => {
@@ -47,3 +52,4 @@ const Tabs = () => {
 
 
 export default Tabs;
+

@@ -4,9 +4,6 @@ import { SIZES } from '../../constants'
 
 class HomeScreen extends Component {
 
-    constructor(){
-       
-    }
 
     render() {
         return (

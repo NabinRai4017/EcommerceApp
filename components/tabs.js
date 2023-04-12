@@ -23,6 +23,7 @@ const Tabs = () => {
                 tabBarStyle: {
                     ...styles.tabBarStyle,
                     ...SHADOWS.medium
+                    
                 }
             }}
         >

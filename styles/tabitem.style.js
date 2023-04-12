@@ -23,6 +23,14 @@ const styles = StyleSheet.create({
         height: 20,
         tintColor: focused ? COLORS.primary : '#748c94'
     }),
+    dot: {
+        position: "absolute",
+        bottom: 4,
+        width: 5,
+        height: 5,
+        borderRadius: 2.5,
+        backgroundColor: COLORS.primary,
+      },
 });
 
 export default styles;

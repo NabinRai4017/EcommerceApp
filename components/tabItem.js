@@ -1,9 +1,8 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Animated, Image, Text, View } from "react-native";
-import { HStack, ZStack } from "@react-native-material/core";
 import styles from "../styles/tabitem.style";
 import { useSpring } from "../animations/useSpring";
-
+import { ZStack, HStack, Box, NativeBaseProvider, Center } from "native-base";
 
 const TabItem = (title, source, focused) => {
     // const to = focused ? 1 : 0
@@ -17,37 +16,45 @@ const TabItem = (title, source, focused) => {
     // }, [to]);
     // const labelTranslate = animation.interpolate({ inputRange: [0, 1], outputRange: [20, 0] });
     // const labelVisibility = animation;
+
     return (
+        <NativeBaseProvider>
 
-        
-        <Animated.View
-            top={14}
-            h={30}
-            style={[styles.box, {
-              
-            }]}>
+            <Box style={{
+                top: 5,
+                height: 50,
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}>
+                <HStack
+                    h={50}
+                    space={1}
+                    style={[styles.hstack]} >
+                    
+                  
+                         <Image
+                         source={source}
+                         resizeMode='contain'
+                         style={styles.image(focused)}
+                     />
+                    
 
-              
-            <HStack
-                spacing={4}
-                style={styles.hstack} >
-                <Image
-                    source={source}
-                    resizeMode='contain'
-                    style={styles.image(focused)}
-                />
+                    {focused ? <View
+                        style={[
+                            styles.centered,
 
-                {focused ? <Animated.View
-                    style={[
-                        styles.centered,
-                        
-                    ]}
-                >
-                    <Text style={styles.title}>{title}</Text>
-                </Animated.View>
-                    : null}
-            </HStack>
-        </Animated.View>
+                        ]}
+                    >
+                        <Text style={styles.title}>{title}</Text>
+                    </View>
+                        : null}
+                </HStack>
+
+                {/* { focused && <View style={styles.dot}></View>
+                } */}
+
+            </Box>
+        </NativeBaseProvider>
     );
 }
 

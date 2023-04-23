@@ -1,4 +1,3 @@
-import { StyleSheet} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {HomeScreen, ProfileScreen, CartScreen, SearchScreen} from './screens';
 import TabItem from './tabItem'
@@ -18,7 +17,6 @@ const Tabs = () => {
         <Tab.Navigator
             screenOptions={{
                 headerShown: false,
-                title: null,
                 tabBarShowLabel: false,
                 tabBarStyle: {
                     ...styles.tabBarStyle,
@@ -29,22 +27,22 @@ const Tabs = () => {
         >
             <Tab.Screen name='Home' component={HomeScreen} options={{
                 tabBarIcon: ({ focused }) => (
-                    TabItem('HOME', icons.home, focused)
+                    <TabItem title='HOME' source={icons.home} focused={focused}/>
                 ),
             }} />
             <Tab.Screen name='Search' component={SearchScreen} options={{
                 tabBarIcon: ({ focused }) => (
-                    TabItem('SEARCH', icons.search, focused)
+                    <TabItem title='SEARCH' source={icons.search} focused={focused}/>
                 ),
             }} />
             <Tab.Screen name='Cart' component={CartScreen} options={{
                 tabBarIcon: ({ focused }) => (
-                    TabItem('FAV', icons.heart, focused)
+                    <TabItem title='FAV' source={icons.heart} focused={focused}/>
                 ),
             }} />
             <Tab.Screen name='Profile' component={ProfileScreen} options={{
                 tabBarIcon: ({ focused }) => (
-                    TabItem('PROFILE', icons.profile, focused)
+                    <TabItem title='PROFILE' source={icons.profile} focused={focused}/>
                 ),
             }} />
         </Tab.Navigator>

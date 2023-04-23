@@ -18,11 +18,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: SIZES.xSmall
     },
-    image: focused => ({
-        width: 20,
-        height: 20,
-        tintColor: focused ? COLORS.primary : '#748c94'
-    }),
     dot: {
         position: "absolute",
         bottom: 4,
@@ -31,6 +26,13 @@ const styles = StyleSheet.create({
         borderRadius: 2.5,
         backgroundColor: COLORS.primary,
       },
+    centered: {
+        
+    },
+    image: {
+        width: 20,
+        height: 20,
+    }
 });
 
 export default styles;

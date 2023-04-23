@@ -9,6 +9,11 @@ const Stack = createNativeStackNavigator();
 
 
 class MainTabScreen extends Component {
+
+    cartTap = () => {
+        console.log("cart pressed")
+    }
+
     render() {
         return (
             <NavigationContainer>
@@ -20,7 +25,7 @@ class MainTabScreen extends Component {
                             headerStyle: { backgroundColor:  COLORS.tertiary},
                             headerShadowVisible: false,
                             headerRight: () => (
-                                <ScreenHeaderBtn iconUrl={icons.cart} dimension='100%' />
+                                <ScreenHeaderBtn iconUrl={icons.cart} dimension='100%' handlePress={this.cartTap} />
                             ),
                             headerTitle: "EcommerceApp",
                         }}

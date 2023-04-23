@@ -1,21 +1,18 @@
 import { useEffect, useMemo, useRef } from "react";
-import { Animated, Image, Text, View } from "react-native";
+import { Animated, Image, ImageSourcePropType, Text, View } from "react-native";
 import styles from "../styles/tabitem.style";
-import { useSpring } from "../animations/useSpring";
 import { ZStack, HStack, Box, NativeBaseProvider, Center } from "native-base";
+import { COLORS } from "../constants";
 
-const TabItem = (title, source, focused) => {
-    // const to = focused ? 1 : 0
-    // const animation = useMemo(() => new Animated.Value(to), []);
-    // useEffect(() => {
-    //     Animated.spring(animation, {
-    //         toValue: to,
-    //         stiffness: 50,
-    //         useNativeDriver: true,
-    //     }).start();
-    // }, [to]);
-    // const labelTranslate = animation.interpolate({ inputRange: [0, 1], outputRange: [20, 0] });
-    // const labelVisibility = animation;
+
+interface TabItemProp{
+    title: string, 
+    source: ImageSourcePropType,
+    focused: boolean
+}
+
+const TabItem = ({title, source, focused}: TabItemProp) => {
+
 
     return (
         <NativeBaseProvider>
@@ -35,14 +32,18 @@ const TabItem = (title, source, focused) => {
                          <Image
                          source={source}
                          resizeMode='contain'
-                         style={styles.image(focused)}
+                         style={[
+                            styles.image,
+                            {
+                                tintColor: focused ? COLORS.primary : '#748c94'
+                            }
+                         ]}
                      />
                     
 
                     {focused ? <View
                         style={[
                             styles.centered,
-
                         ]}
                     >
                         <Text style={styles.title}>{title}</Text>

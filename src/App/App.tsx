@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import MainTabScreen from "./components/maintab";
+import MainTabScreen from "../../components/maintab";
 
 
 class App extends Component {

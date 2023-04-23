@@ -1,11 +1,13 @@
 import { Component } from "react";
 import { Text } from "react-native";
 
-class SplashScreen extends Component{
 
-    render(){
+
+const SplashScreen = () => {
+
+
         return <Text>Splash Screen</Text>
-    }
+    
     
 }
 

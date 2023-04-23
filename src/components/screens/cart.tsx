@@ -1,13 +1,14 @@
 import { Component } from "react";
 import { Text, StyleSheet } from 'react-native';
 
-class CartScreen extends Component {
 
-    render() {
+const CartScreen = () =>  {
+
+
         return (
             <Text>Cart</Text>
         );
-    }
+    
 }
 
 

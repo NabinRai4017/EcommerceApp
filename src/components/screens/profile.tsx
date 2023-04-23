@@ -3,13 +3,13 @@ import { Text, StyleSheet } from 'react-native';
 
 
 
-class ProfileScreen extends Component {
+const ProfileScreen = () =>  {
 
-    render() {
+
         return (
            <Text style={styles.container}>Profile</Text>
         );
-    }
+    
 }
 
 

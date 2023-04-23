@@ -3,15 +3,16 @@ import { Component } from "react";
 import { Text, StyleSheet } from 'react-native';
 import { SIZES } from "../constants";
 
-class NewArrival extends Component{
 
-    render(){
+const NewArrival = () => {
+
+
         return (
             <Text
             style={styles.title}
             >New Arrials</Text>
         );
-    }
+    
 
 }
 

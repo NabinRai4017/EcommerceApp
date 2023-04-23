@@ -1,11 +1,15 @@
-import {Component} from 'react';
+import { Component } from 'react';
 import MainTabScreen from "../components/maintab";
+import { Provider } from 'react-redux';
+import { store } from '../state/store';
 
 
 class App extends Component {
   render() {
     return (
-      <MainTabScreen/>
+      <Provider store={store}>
+        <MainTabScreen />
+      </Provider>
     );
   }
 }

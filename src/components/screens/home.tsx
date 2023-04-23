@@ -1,21 +1,36 @@
-import { Component } from "react";
 import { Text, StyleSheet, ScrollView } from 'react-native';
 import { SIZES } from '../../constants'
+import { fetchProducts, allProducts, productsStatus, productsError } from '../../state/features/productSlice';
+import { useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from '../../state/store';
 
-class HomeScreen extends Component {
+
+const HomeScreen = () => {
+
+    const dispatch = useAppDispatch();
+    const products = useAppSelector(allProducts);
+    const status = useAppSelector(productsStatus)
+    const error = useAppSelector(productsError)
+
+    useEffect(() => {
+        if (status === 'idle') {
+            console.log('called')
+            dispatch(fetchProducts())
+            console.log('---------')
+        } else {
+        }
+    }, [status, dispatch])
 
 
-    render() {
-        return (
-            <ScrollView>
-                <Text
-                    style={styles.title}
-                >Discover</Text>
-              
-            </ScrollView>
+    return (
+        <ScrollView>
+            <Text
+                style={styles.title}
+            >There are {products.length} products</Text>
 
-        );
-    }
+        </ScrollView>
+    );
+
 }
 
 

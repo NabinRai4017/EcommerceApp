@@ -1,13 +1,13 @@
 import { Component } from "react";
 import { Text, StyleSheet } from 'react-native';
 
-class SearchScreen extends Component {
+const SearchScreen = () =>   {
 
-    render() {
+
         return (
             <Text>Search</Text>
         );
-    }
+    
 }
 
 

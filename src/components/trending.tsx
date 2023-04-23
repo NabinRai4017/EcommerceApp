@@ -3,17 +3,13 @@ import { Component } from "react";
 import { Text, StyleSheet } from 'react-native';
 import { SIZES } from "../constants";
 
-class Trending extends Component{
+const Trending = () => {
 
-
-    render(){
         return (
             <Text
             style={styles.title}
             >Trendings</Text>
         );
-    }
-
 }
 
 const styles = StyleSheet.create({

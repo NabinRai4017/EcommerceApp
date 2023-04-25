@@ -1,18 +1,9 @@
 import { createAsyncThunk, createSelector, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-
+import Product from '../model/product'
 
 const PRODUCT_API_URL = 'https://fakestoreapi.com/products';
 
-export interface Product{
-    id: number;
-    title: string;
-    price: number;
-    rating: {
-        rate: number;
-        count: number;
-    }
-}
 
 interface ProductState{
     products: Product[];
@@ -74,9 +65,6 @@ export const ProductSlice = createSlice({
     }
 });
 
-
-export default ProductSlice.reducer;
-
 const products = (state: RootState) => state.product.products;
 export const allProducts = createSelector([products], (products) => {
     return products;
@@ -91,3 +79,5 @@ const error = (state: RootState) => state.product.error;
 export const productsError = createSelector([error], (error) => {
     return error;
 });
+
+export default ProductSlice.reducer;

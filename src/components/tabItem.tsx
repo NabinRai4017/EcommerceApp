@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Animated, Image, ImageSourcePropType, Text, View } from "react-native";
 import styles from "../styles/tabitem.style";
-import { ZStack, HStack, Box, NativeBaseProvider, Center } from "native-base";
+import {HStack, Box, NativeBaseProvider, Center } from "native-base";
 import { COLORS } from "../constants";
 
 

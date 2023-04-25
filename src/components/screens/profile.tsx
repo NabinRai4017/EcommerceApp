@@ -23,8 +23,6 @@ const ProfileScreen = () => {
                 <Button style={styles.signInButton}>Sign In</Button>
             </View>
         </View>
-
-
     );
 
 }
@@ -38,7 +36,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         marginTop: 60,
         textAlign: 'center',
-        fontWeight: 'medium',
     },
     googleButton: {
         marginTop: 40,

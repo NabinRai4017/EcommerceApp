@@ -1,6 +1,6 @@
 # EcommerceApp
 
-This is a project developed using React Native framework for demostration purpose only. It implements Redux architecture using Redux Toolkit and Hooks. This project uses TypeScript languages for learning purpose.
+This is a project developed using React Native framework for demostration purpose only. It implements Redux architecture using Redux Toolkit and Hooks. This project uses TypeScript language for learning purpose.
 
 ### Redux
 

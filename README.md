@@ -14,4 +14,4 @@ Redux Toolkit is our official recommended approach for writing Redux logic. It w
 Hooks are functions that let you “hook into” React state and lifecycle features from function components. They let you use state and other React features without writing a class. For more detail click [here](https://react.dev/reference/react)
 
 
-Tab bar details [Here](https://medium.com/betomorrow/making-an-animated-tab-bar-with-react-native-64104da7bbd4)
+## On progress

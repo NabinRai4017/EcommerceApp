@@ -14,6 +14,10 @@ Redux Toolkit is our official recommended approach for writing Redux logic. It w
 Hooks are functions that let you “hook into” React state and lifecycle features from function components. They let you use state and other React features without writing a class. For more detail click [here](https://react.dev/reference/react)
 
 
+### Server
+It is supported by self made REST APIs using Django and Django REST framework. For More details click [here](https://github.com/NabinRai4017/MovieFoodServer).
+
+
 ## On progress
 <p float="left">
   <img src="https://github.com/NabinRai4017/EcommerceApp/blob/main/images/home-page.png" width="230" height="499">

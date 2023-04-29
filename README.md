@@ -17,6 +17,6 @@ Hooks are functions that let you “hook into” React state and lifecycle featu
 ## On progress
 
 <img src="https://github.com/NabinRai4017/EcommerceApp/blob/main/images/home-page.png" width="230" height="499">
-<img src="https://github.com/NabinRai4017/EcommerceApp/blob/main/images/profile-page.png" width="230" height="499">
+<img style="float: right" src="https://github.com/NabinRai4017/EcommerceApp/blob/main/images/profile-page.png" width="230" height="499">
 
 

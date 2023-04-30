@@ -1,11 +1,25 @@
 import { Button, HStack } from 'native-base';
 import { Text, StyleSheet, View, TextInput } from 'react-native';
 import { COLORS } from '../../constants';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { useAppDispatch, useAppSelector } from '../../state/store';
+import { getUser, userStatus, userError } from '../../state/features/userSlice';
+import { userLogin } from '../../state/services/userService';
+import { useEffect } from 'react';
 
 
 
 const ProfileScreen = () => {
+
+
+    const dispatch = useAppDispatch();
+    const user = useAppSelector(getUser);
+    const status = useAppSelector(userStatus)
+    const error = useAppSelector(userError)
+
+    const signInAction = () => {
+        const data = {}
+        dispatch(userLogin())
+    }
 
     return (
         <View style={styles.container}>
@@ -20,7 +34,9 @@ const ProfileScreen = () => {
                     <Text style={styles.forgetPassword}>Forget password?</Text>
                 </View>
                 <TextInput placeholder='Enter password' style={styles.input}></TextInput>
-                <Button style={styles.signInButton}>Sign In</Button>
+                <Button style={styles.signInButton} onPress={signInAction}>Sign In</Button>
+
+                <Text style={styles.orText}>{user?.email}</Text>
             </View>
         </View>
     );
